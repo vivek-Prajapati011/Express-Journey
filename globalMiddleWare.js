@@ -3,7 +3,7 @@ const app = express()
 
 const port = 3000
 
-app.use("/", (res, req, next) => {
+app.use( (res, req, next) => {
     next()
 })
 
