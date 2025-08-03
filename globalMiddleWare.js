@@ -12,7 +12,12 @@ app.get("/",(req, res) => {
 })
 
 app.get("/admin", (req, res) => {
+    if (req.query.admin === 'true') {
     res.send("this is admin page")
+  } else {
+    res.status(403).send('Access Denied  Admins only');
+  }
+    
 })
 
 app.listen(port, () => {
