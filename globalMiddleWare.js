@@ -3,6 +3,10 @@ const app = express()
 
 const port = 3000
 
+app.use("/", (res, req, next) => {
+    next()
+})
+
 app.get("/",(req, res) => {
     res.send("this is home page")
 })
